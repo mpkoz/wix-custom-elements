@@ -24,6 +24,11 @@ const createStyle4 = () => {
         height: auto;
       }
 
+      .m-countdown{
+        background: #fff !important;
+        margin-top: 10px !important;
+      }
+
       .lazy-image{
         width: 100% !important;
         height: auto !important;
