@@ -69,7 +69,7 @@ class ListingElement extends HTMLElement {
       listingContainer = this.parentNode.parentNode.parentNode;
       this.appendChild(createStyle1());
       this.appendChild(createDiv1(this.listing.listingId, this.dataAddress, this.network, this.fallback));
-      this.appendChild(createSelectorDiv1(a.listing.listingId));
+      this.appendChild(createSelectorDiv1(this.listing.listingId));
       this.hasInstantiated = true;
   }
 }

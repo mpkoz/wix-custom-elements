@@ -13,7 +13,6 @@ const createDiv4 = (index, dataAddress, network, fallback) => {
   return newDiv;
 };
 
-
 const createStyle4 = () => {
   const styleElement = document.createElement('style');
   styleElement.innerHTML = `

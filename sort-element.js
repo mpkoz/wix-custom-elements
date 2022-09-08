@@ -8,7 +8,6 @@ const createDiv3 = (index) => {
   return newDiv;
 };
 
-
 const createStyle3 = () => {
   const styleElement = document.createElement('style');
   styleElement.innerHTML = `

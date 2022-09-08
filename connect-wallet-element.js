@@ -8,7 +8,6 @@ const createDiv2 = (dataAddress, network, fallback) => {
 };
 
 
-
 const createStyle2 = () => {
   const styleElement = document.createElement('style');
   styleElement.innerHTML = `
