@@ -31,26 +31,23 @@ const createStyle1 = () => {
 };
 
 function waitToInstantiate(listing, delay){
-  if(!listing.hasInstantiated){
-    setTimeout(function (a) {
+  //if(!listing.hasInstantiated){
+    //setTimeout(function (a) {
       //a.listing.element = a;
-        a.listing.element = a.parentNode.parentNode;
-        listingContainer = a.parentNode.parentNode.parentNode;
-        //console.log(a.listing.edition);
-        a.appendChild(createStyle1());
-        if(a.listing.listingId != "RESERVE"){
-          a.appendChild(createDiv1(a.listing.listingId, a.dataAddress, a.network, a.fallback));
-        }  
-        a.appendChild(createSelectorDiv1(a.listing.listingId));
-        a.hasInstantiated = true;
-    }, delay, listing);
-  }
+        // a.listing.element = a.parentNode.parentNode;
+        // listingContainer = a.parentNode.parentNode.parentNode;
+        // a.appendChild(createStyle1());
+        // a.appendChild(createDiv1(a.listing.listingId, a.dataAddress, a.network, a.fallback));
+        // a.appendChild(createSelectorDiv1(a.listing.listingId));
+        // a.hasInstantiated = true;
+    //}, delay, listing);
+  //}
 }
 
 class ListingElement extends HTMLElement {
   constructor() {
-    super();
-    this.listing = listings[currentInstantiationIndex++];
+    super();    
+    this.listing = listings[0];
     this.dataAddress = globalDataAddress;
     this.network = globalNetwork;
     this.fallback = globalFallback;
@@ -67,7 +64,13 @@ class ListingElement extends HTMLElement {
   }
 
   connectedCallback() {
-    waitToInstantiate(this, parseInt(this.listing.edition) * 2);
+      this.listing = listings[currentInstantiationIndex++];
+      this.listing.element = this.parentNode.parentNode;
+      listingContainer = this.parentNode.parentNode.parentNode;
+      this.appendChild(createStyle1());
+      this.appendChild(createDiv1(this.listing.listingId, this.dataAddress, this.network, this.fallback));
+      this.appendChild(createSelectorDiv1(a.listing.listingId));
+      this.hasInstantiated = true;
   }
 }
 

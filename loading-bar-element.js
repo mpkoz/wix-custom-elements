@@ -4,6 +4,7 @@ const createDiv5 = () => {
   return newDiv;
 };
 
+
 const createCanvas5= () => {
   const canvas = document.createElement('canvas');
   canvas.setAttribute("id", "loadingBarCanvas");
