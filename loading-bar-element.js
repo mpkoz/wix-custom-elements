@@ -1,4 +1,4 @@
-const createDiv = () => {
+const createDiv5 = () => {
   const newDiv = document.createElement('div');
     newDiv.setAttribute("id", "loadingBar");
   return newDiv;
@@ -12,14 +12,14 @@ const createCanvas= () => {
   return canvas;
 };
                 
-const createSelectorDiv = (id) => {
+const createSelectorDiv5 = (id) => {
   const newDiv = document.createElement('div');
   newDiv.setAttribute("id", id);
   newDiv.setAttribute("class", "selectorDiv");
   return newDiv;
 };
 
-const createStyle = () => {
+const createStyle5 = () => {
   const styleElement = document.createElement('style');
   styleElement.innerHTML = `
 
@@ -47,9 +47,9 @@ class LoadingBarElement extends HTMLElement {
   }
 
   connectedCallback() {
-    this.appendChild(createStyle());
-    this.appendChild(createCanvas());
-    this.appendChild(createSelectorDiv("canvasSelector"));
+    this.appendChild(createStyle5());
+    this.appendChild(createCanvas5());
+    this.appendChild(createSelectorDiv5("canvasSelector"));
     //this.appendChild(createDiv());
     loadingBar();
   }

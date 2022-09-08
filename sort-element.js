@@ -1,4 +1,4 @@
-const createDiv = (index) => {
+const createDiv3 = (index) => {
   const newDiv = document.createElement('div');
   newDiv.style.setProperty('width', '0px');
   newDiv.style.setProperty('height', '0px');
@@ -8,7 +8,7 @@ const createDiv = (index) => {
   return newDiv;
 };
 
-const createStyle = () => {
+const createStyle3 = () => {
   const styleElement = document.createElement('style');
   styleElement.innerHTML = `
 
@@ -39,7 +39,7 @@ class SortElement extends HTMLElement {
   }
 
   connectedCallback() {
-    this.appendChild(createDiv());
+    this.appendChild(createDiv3());
   }
 
 }

@@ -1,4 +1,4 @@
-const createDiv = (index, dataAddress, network, fallback) => {
+const createDiv1 = (index, dataAddress, network, fallback) => {
   const newDiv = document.createElement('div');
   newDiv.setAttribute("data-widget","m-catalog-card");
   newDiv.setAttribute("data-address",dataAddress);
@@ -16,14 +16,14 @@ const createDiv = (index, dataAddress, network, fallback) => {
   return newDiv;
 };
 
-const createSelectorDiv = (index) => {
+const createSelectorDiv1 = (index) => {
   const newDiv = document.createElement('div');
   newDiv.setAttribute("id", index.toString());
   newDiv.setAttribute("class", "selectorDiv");
   return newDiv;
 };
 
-const createStyle = () => {
+const createStyle1 = () => {
   const styleElement = document.createElement('style');
   styleElement.innerHTML = `
     `;
@@ -37,11 +37,11 @@ function waitToInstantiate(listing, delay){
         a.listing.element = a.parentNode.parentNode;
         listingContainer = a.parentNode.parentNode.parentNode;
         //console.log(a.listing.edition);
-        a.appendChild(createStyle());
+        a.appendChild(createStyle1());
         if(a.listing.listingId != "RESERVE"){
-          a.appendChild(createDiv(a.listing.listingId, a.dataAddress, a.network, a.fallback));
+          a.appendChild(createDiv1(a.listing.listingId, a.dataAddress, a.network, a.fallback));
         }  
-        a.appendChild(createSelectorDiv(a.listing.listingId));
+        a.appendChild(createSelectorDiv1(a.listing.listingId));
         a.hasInstantiated = true;
     }, delay, listing);
   }

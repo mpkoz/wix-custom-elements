@@ -1,4 +1,4 @@
-const createDiv = (dataAddress, network, fallback) => {
+const createDiv2 = (dataAddress, network, fallback) => {
   const newDiv = document.createElement('div');
   newDiv.setAttribute("data-widget","m-multi-wallet-connect");
   newDiv.setAttribute("data-delay-auth", "true");
@@ -8,7 +8,7 @@ const createDiv = (dataAddress, network, fallback) => {
 };
 
 
-const createStyle = () => {
+const createStyle2 = () => {
   const styleElement = document.createElement('style');
   styleElement.innerHTML = `
       #m-connection{
@@ -43,8 +43,8 @@ class ConnectWalletElement extends HTMLElement {
   }
 
   connectedCallback() {
-    this.appendChild(createStyle());
-    this.appendChild(createDiv(this.dataAddress, this.network, this.fallback));
+    this.appendChild(createStyle2());
+    this.appendChild(createDiv2(this.dataAddress, this.network, this.fallback));
   }
 
 }

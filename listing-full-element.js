@@ -1,4 +1,4 @@
-const createDiv = (index, dataAddress, network, fallback) => {
+const createDiv4 = (index, dataAddress, network, fallback) => {
   const newDiv = document.createElement('div');
   newDiv.setAttribute("data-widget","m-layout-complete-listing");
   newDiv.setAttribute("data-address",dataAddress);
@@ -13,7 +13,7 @@ const createDiv = (index, dataAddress, network, fallback) => {
   return newDiv;
 };
 
-const createStyle = () => {
+const createStyle4 = () => {
   const styleElement = document.createElement('style');
   styleElement.innerHTML = `
       .m-expandable-image{
@@ -76,8 +76,8 @@ class ListingFullElement extends HTMLElement {
   }
 
   connectedCallback() {
-    this.appendChild(createStyle());
-    this.appendChild(createDiv(this.edition, this.dataAddress, this.network, this.fallback));
+    this.appendChild(createStyle4());
+    this.appendChild(createDiv4(this.edition, this.dataAddress, this.network, this.fallback));
   }
 }
 customElements.define('listing-full-element',  ListingFullElement);
